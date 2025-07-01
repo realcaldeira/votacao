@@ -1,0 +1,11 @@
+#!/bin/sh
+# Maven Wrapper Script
+
+if [ -z "$MAVEN_HOME" ] ; then
+  echo "MAVEN_HOME not set, trying to find Maven in PATH"
+  MAVEN_EXEC="mvn"
+else
+  MAVEN_EXEC="$MAVEN_HOME/bin/mvn"
+fi
+
+exec "$MAVEN_EXEC" "$@"
